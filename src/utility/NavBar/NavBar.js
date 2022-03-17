@@ -20,7 +20,7 @@ class NavBar extends Component {
         <div className="row">
             <nav className={navColor}>
                 <div className="nav-wrapper">
-                    <Link to = "/" className="left">airbnb</Link>
+                    <Link to = "/" className="logo left">Airbnb</Link>
                     <ul id="nav-mobile" className="right">
                         <li><Link to="/">English (US)</Link></li>
                         <li><Link to="/">$ USD</Link></li>
