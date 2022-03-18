@@ -40,14 +40,14 @@ class SearchBox extends Component {
                     </div>
 
                     <div className="col m6 left pl-0">
-                        <label className="form-label" for="check-in">Check-In</label>
+                        <label className="form-label" htmlFor="check-in">Check-In</label>
                         <div className="input-field" id="check-in">
                             <input onChange={this.changeCheckIn} value={this.state.checkIn} type="date" />
                         </div>
                     </div>
 
                     <div className="col m6 right pr-0">
-                        <label className="form-label" for="check-out">Check-Out</label>
+                        <label className="form-label" htmlFor="check-out">Check-Out</label>
                         <div className="input-field" id="check-out">
                             <input onChange={this.changeCheckOut} value={this.state.checkOut} type="date" />
                         </div>
@@ -61,7 +61,7 @@ class SearchBox extends Component {
                     </div>
 
                     <div className="col m12 submit-btn">
-                        <div classname="input-field" id="submit-btn">
+                        <div className="input-field" id="submit-btn">
                             <input className="btn waves-effect waves-light red accent-2" type="submit" />
                         </div>
                     </div>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./Home.css";
-import City from "../../utility/City/City";
 import SearchBox from "./SearchBox";
 import Spinner from "../../utility/Spinner/Spinner";
 import axios from "axios";
+import Cities from "../../utility/City/Cities";
 
 class Home extends Component {
 
@@ -26,7 +26,7 @@ class Home extends Component {
         )
     }
 
-    const recCities = this.state.cities.map((city, i)=><City city = {city} key = {i} />)
+    const recCities = <Cities cities={this.state.cities} />
     
     return (
       <div className="container-fluid">
@@ -36,6 +36,9 @@ class Home extends Component {
                     <SearchBox />
                 </div>
             </div>
+        </div>
+        <div className="row">
+            {recCities}
         </div>
       </div>
     )
