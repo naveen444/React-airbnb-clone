@@ -35,10 +35,10 @@
     margin-top: 0px;
 }
 
-.search-box-form input{
+.search-box-form input:not([type="submit"]){
     width: 100%;
-    font-size: 24px;
-    padding: 5px;
+    font-size: 18px;
+    padding: 0px;
 }
 
 .search-box-form .form-label{
