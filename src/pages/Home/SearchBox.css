@@ -2,12 +2,15 @@
 .home-search-box.col.m4{
     background: #ffffff !important;
     border-radius: 4px !important;
-    padding: 32px !important;
-    padding-bottom: 24px !important;
-    width: 441px !important;
+    padding: 20px 30px !important;
+    width: 420px !important;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
-    margin-left: 80px;
-    margin-top: 80px;
+    margin-left: 90px;
+    margin-top: 90px;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
 }
 
 .home-search-box h1{

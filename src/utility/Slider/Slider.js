@@ -1,11 +1,25 @@
 import React, { Component } from "react";
-import './Slider.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './Slider.css';
+import SlickSlider from 'react-slick';
+import { turquoise } from "color-name";
 
 class Slider extends Component {
     render() {
+        const settings = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            arrows: true,
+            slidesToShow: 5,
+            slidesToScroll: 1
+        }
         return (
-            <div className="slider">
-                <h1>Sanity Slider</h1>
+            <div className="slick">
+                <SlickSlider {...settings}>
+                    {this.props.elements}
+                </SlickSlider>
             </div>
         )
     }
