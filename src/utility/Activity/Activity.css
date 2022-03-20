@@ -10,3 +10,21 @@
     max-width: 100%;
     border-radius: 8px;
 }
+
+.activity-type {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-type span {
+    font-weight: 400;
+}
+
+.activity-type .material-icons {
+    font-size: 20px;
+}
+
+.rating {
+    display: flex;
+}
