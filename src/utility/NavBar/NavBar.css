@@ -1,8 +1,9 @@
-.nav{
+.container-fluid.nav{
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+    padding: 0 20px !important;
 }
 
 .nav-wrapper .logo {
@@ -18,6 +19,10 @@
 .nav ul li{
     color: white;
     cursor: pointer;
+}
+
+.container-fluid.nav .p-10 {
+    padding: 0 10px !important;
 }
 
 
