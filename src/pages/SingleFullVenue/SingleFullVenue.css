@@ -93,3 +93,35 @@
 .point-desc{
     margin-bottom: 20px;
 }
+
+.check-in-out {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+    margin: 10px 0 !important;
+}
+
+.check-in-out > div {
+    padding: 0 !important;
+    width: 48% !important;
+    margin: 0 !important;
+}
+
+.select-guest-wrapper select.browser-default {
+    padding: 0 !important;
+    border: 1px solid #a1a1a1;
+}
+
+.select-guest-wrapper {
+    padding: 0 !important;
+}
+
+.reserve-btn {
+    padding: 0 !important;
+    margin: 10px 0 !important;
+}
+
+.reserve-btn button.btn {
+    margin: 0!important;
+}
