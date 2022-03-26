@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
 import SlickSlider from 'react-slick';
-import { turquoise } from "color-name";
+// import { turquoise } from "color-name";
 
 class Slider extends Component {
     render() {

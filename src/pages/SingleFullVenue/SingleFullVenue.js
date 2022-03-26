@@ -34,7 +34,7 @@ class SingleFullVenue extends Component {
         return (
             <div className="row single-venue">
                 <div className="col s12 center">
-                    <img className="single-venue-img" src={sv.imageUrl} />
+                    <img className="single-venue-img" src={sv.imageUrl} alt="Single-full-Venue" />
                 </div>
                 <div className="col center s8 location-details offset-s2">
                     <div className="col s8 left-details">

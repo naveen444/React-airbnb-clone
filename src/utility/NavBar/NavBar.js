@@ -8,9 +8,6 @@ import Login from "../../pages/Login/Login";
 import SignUp from "../../pages/Login/SignUp";
 
 class NavBar extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
 

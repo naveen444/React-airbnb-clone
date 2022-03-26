@@ -3,7 +3,6 @@ import './Venue.css';
 import Venue from "./Venue";
 
 function Venues(props) {
-    console.log(props);
     const venues = props.venues.map((venue, i)=> {
         return (
             <div className="col s3" key={i}>

@@ -9,7 +9,7 @@ class Venue extends Component {
             <div className="venue col s12">
                 <Link to={`/venue/${id}`}>
                     <div className="image">
-                        <img src={imageUrl} />
+                        <img src={imageUrl} alt="Venue" />
                     </div>
                     <div className="location-stars">
                         <span className="location">{location}</span>

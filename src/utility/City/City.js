@@ -10,7 +10,7 @@ class City extends Component {
             <div className="city col s12">
                 <Link to = {`/city/${id}`}>
                     <div className="image">
-                        <img src={image} />
+                        <img src={image} alt="City" />
                     </div>
                     <div className="city-name">{cityName}</div>
                     <div className="price">${price}/night average</div>

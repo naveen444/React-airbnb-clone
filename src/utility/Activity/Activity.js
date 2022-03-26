@@ -8,7 +8,7 @@ class Activity extends Component {
         return (
             <div className="activity">
                 <Link to={`/activity/${id}`}>
-                    <img src={image} />
+                    <img src={image} alt="Activity" />
                     <div className="activity-type">
                         {activityType}
                         <span className="rating">
