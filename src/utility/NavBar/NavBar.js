@@ -9,6 +9,12 @@ import SignUp from "../../pages/Login/SignUp";
 
 class NavBar extends Component {
 
+	componentDidUpdate(oldProps) {
+		if (oldProps.auth.token != this.props.auth.token) {
+			this.props.openModal('closed', '');
+		}
+	}
+
   render() {
 
     let navColor = 'transparent'
@@ -28,8 +34,18 @@ class NavBar extends Component {
                         <li><Link to="/">$ USD</Link></li>
                         <li><Link to="/">Become a host</Link></li>
                         <li><Link to="/">Help</Link></li>
-                        <li className="p-10" onClick={()=>{this.props.openModal('open',<SignUp />)}}>Sign Up</li>
-                        <li className="p-10" onClick={()=>{this.props.openModal('open',<Login />)}}>Log In</li>
+                        {this.props.auth.email
+							? 	<>
+									<li>Hello, {this.props.auth.email}</li>
+									<li>Logout</li>
+								</>
+							: 	<>
+								
+									<li className="p-10" onClick={()=>{this.props.openModal('open',<SignUp />)}}>Sign Up</li>
+									<li className="p-10" onClick={()=>{this.props.openModal('open',<Login />)}}>Log In</li>
+
+								</>
+                        }
                     </ul>
                 </div>
             </nav>
@@ -39,10 +55,16 @@ class NavBar extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+      auth: state.auth
+  }
+}
+
 function mapDispatchToProps(dispatcher) {
   return bindActionCreators({
     openModal: openModal
   },dispatcher)
 }
 
-export default connect(null, mapDispatchToProps)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

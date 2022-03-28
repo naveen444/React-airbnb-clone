@@ -5,6 +5,7 @@ import openModal from '../../actions/openModal';
 import Login from './Login';
 import axios from 'axios';
 import swal from 'sweetalert';
+import regAction from '../../actions/regAction';
 
 class SignUp extends Component{
 
@@ -67,7 +68,9 @@ class SignUp extends Component{
                 title: "Success",
                 // text: "Are you sure that you want to leave this page?",
                 icon: "success",
-              })
+            })
+            // we call our register action to update our auth reducer
+            this.props.regAction(resp.data);
         }
 
         const url2 = `${window.apiHost}/users/token-check`;
@@ -75,6 +78,7 @@ class SignUp extends Component{
     }
 
     render(){
+        console.log(this.props.auth);
         return(
             <div className="login-form">
                 <form onSubmit={this.submitLogin}>
@@ -95,13 +99,20 @@ class SignUp extends Component{
 
 }
 
+function mapStateToProps(state) {
+    return {
+        auth: state.auth
+    }
+}
+
 function mapDispatchToProps(dispatcher) {
     return bindActionCreators({
-        openModal: openModal
+        openModal: openModal,
+        regAction: regAction,
     },dispatcher)
 }
   
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 
 const SignUpInputFields = (props) => {
     return (
