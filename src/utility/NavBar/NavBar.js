@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import openModal from "../../actions/openModal";
+import logOutAction from "../../actions/logOutAction";
 import Login from "../../pages/Login/Login";
 import SignUp from "../../pages/Login/SignUp";
 
@@ -37,7 +38,7 @@ class NavBar extends Component {
                         {this.props.auth.email
 							? 	<>
 									<li>Hello, {this.props.auth.email}</li>
-									<li>Logout</li>
+									<li onClick={() => this.props.logOutAction()}>Logout</li>
 								</>
 							: 	<>
 								
@@ -63,7 +64,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatcher) {
   return bindActionCreators({
-    openModal: openModal
+    openModal: openModal,
+	logOutAction: logOutAction,
   },dispatcher)
 }
 
