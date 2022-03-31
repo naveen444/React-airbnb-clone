@@ -49,7 +49,7 @@ class Account extends Component {
 							<h1>Choose an option on the left!</h1>
 						} />
 						<Route exact path="/account/reservations/confirmed" render={()=> 
-							<Bookings type="upcoming" bookings={upComingBookings} />
+							<Bookings type="upcoming" bookings={upComingBookings} token={this.props.auth.token} />
 						} />
 						<Route exact path="/account/reservations/past" >
 							<Bookings type="past" bookings = {pastBookings} />
