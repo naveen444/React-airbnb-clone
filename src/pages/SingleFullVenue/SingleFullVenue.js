@@ -63,6 +63,24 @@ class SingleFullVenue extends Component {
 			const stripePublicKey = 'pk_test_5198HtPL5CfCPYJ3X8TTrO06ChWxotTw6Sm2el4WkYdrfN5Rh7vEuVguXyPrTezvm3ntblRX8TpjAHeMQfHkEpTA600waD2fMrT';
 			await loadScript(scriptUrl);
 			const stripe = window.Stripe(stripePublicKey);
+			const stripeSessionUrl = `${window.apiHost}/payment/create-session`;
+			const data = {
+				venueData: this.state.singleVenue,
+				totalPrice,
+				diffDays,
+				pricePerNight,
+				checkIn: this.state.checkIn,
+				checkOut: this.state.checkOut,
+				token: this.props.auth.token,
+				currency: 'USD',
+			}
+			const sessionVar = await axios.post(stripeSessionUrl, data);
+			// console.log(sessionVar.data);
+			stripe.redirectToCheckout({
+				sessionId: sessionVar.data.id
+			}).then((result)=>{
+				// if the network fail this will run
+			})
 		}
     }
 
